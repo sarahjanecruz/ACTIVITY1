@@ -1,0 +1,52 @@
+-- Online SQL Editor to Run SQL Online.
+-- Use the editor to create new tables, insert data and all other SQL operations.
+  
+CREATE TABLE tbl_Employees(
+EmployeeID int IDENTITY(1,1) PRIMARY KEY,
+EmployeeName VARCHAR(100) NULL UNIQUE,
+JobName VARCHAR(50) NULL,
+ManagerID int NULL,
+HireDate DATETIME NULL,
+Salary DECIMAL(18,2) NULL,
+Commision DECIMAL(18,2) NULL,
+DepartmentID int NULL
+)
+
+select * from tbl_Employees 
+(
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Blaze', 'Manager', 68319, 1991-05-01, 2750.00, NULL, 3001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Clare', 'Manager', 68319, 1991-06-09, 2550.00, NULL, 1001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Jonas', 'Manager', 68319, 1991-04-02, 2957.00, NULL, 2001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Scarlet', 'Analyst', 65646, 1997-04-19, 3100.00, NULL, 2001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Frank', 'Analyst', 65646, 1991-12-08, 3100.00, NULL, 2001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Sandrine', 'Clerk', 69062, 1990-12-18, 900.00, NULL, 2001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Adelyn', 'Salesman', 66928, 1991-02-20, 1700.00, 400.00, 3001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Wade', 'Salesman', 68319, 1991-02-22, 1350.00, 1500.00, 3001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Madden', 'Salesman', 68319, 1991-09-28, 1350.00, 600, 3001)
+
+insert into tbl_Employees (EmployeeName, JobName, ManagerID, HireDate, Salary, Commision, DepartmentID)
+values ('Kayling', 'President', NULL, 1991-11-18, 6000.00, NULL, 1001)
+ )
+ 
+SELECT DISTINCT JOBNAME FROM tbl_EMPLOYEE
+
+SELECT EmployeeID,EmployeeName,Salary,HireDate From tbl_EMPLOYEE Order by HireDate DESC
+
+UPDATE tbl_EMPLOYEE SET ManagerID=66930 where EmployeeName='KAYLING'
